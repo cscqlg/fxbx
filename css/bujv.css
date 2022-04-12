@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(127, 127,127);
+    display: flex;
+    justify-content: center;
+}
+
+
+.zongdiv{
+    width: 720px;
+    height: 1080px;
+    background-color: white;
+
+}
+
+
+.tou{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.toua a:link{
+    color: black;
+    text-decoration-line: none;
+}
+
+.toua a:visited{
+    color:white;
+    text-decoration: none;
+    text-shadow: 10px;
+}
+
+.toua a:hover{
+    color:brown;
+    text-decoration-line:overline;
+
+}
+
+.toua>ul{
+    display: flex;
+
+    width: 720px;
+
+}
+
+.toua>ul>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: 95px;
+    height: 30px;
+    opacity: 0.9;
+    background-color: rgb(0, 127, 127);
+}
+
+.ydiv{
+    /* margin-top: 80%; */
+    width: 50px;
+    height: 300px;
+
+
+}
+
+
+.stdiv{
+    height: 900px;
+    margin: 0px;
+    padding: 0px; 
+
+}
+.sk3{
+    padding-left: 55px;
+    margin-top: 50px;
+
+}
+
+.weidiv{
+
+   
+
+    border-top-width: 2px;
+    border-top-color: rgb(127, 127,127);
+    border-top-style: groove;
+    font-size: 20px;
+    height: 50px;
+    width: 720px;
+
+
+}
+
+.weidiv div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:0px;
+    width: 650px;
+}
+
+.weidiv a:link{
+    color: darkgray;
+    text-decoration-line: none;
+
+}
+
+.weidiv a:visited{
+    color: darkgray;
+    text-decoration-line: none;
+}
+
+.txt{
+    
+    resize: none;
+}
+
+
+.sk1{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 55px;
+
+
+}
+
+
+.sk2{
+    padding-top: 10px;
+    padding-left: 55px;
+    color:black;
+}
