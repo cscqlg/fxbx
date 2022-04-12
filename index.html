@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/wy.ico">
+    <link rel="stylesheet" href="css/bujv.css">
+    <title>wuhu!</title>
+</head>
+<body>
+
+    <div name="zong" class="zongdiv">          
+        <div name="tou" class="toua">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">主页</a></li>
+                <li><a href="#">日志</a></li>
+                <li><a href="#">项目</a></li>
+                <li><a href="https://github.com/cscqlg/flxboxtest.git">源码</a></li>
+                <li><a href="#">联系</a></li>
+            </ul>
+        </div>
+
+        <div name="shengti" class="stdiv">
+
+			<div class="sk2">
+				C++: 高精度算法代码
+			</div>
+			<div class="sk3" >
+				<textarea class="txt" cols="90" rows="50" readonly>
+#include<iostream>
+#include<string>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+
+
+bool fs(string a)
+{
+	return a[0] == '-';
+}
+
+string nx(string n)  //逆序
+{
+	string n1 = n;
+	for (int i = n.length()-1; i>=0; i--)
+	{
+		n1[n.length() - 1 - i] = n[i];
+	}
+
+	return n1;
+}
+
+string x(string x1,string x2)
+{
+
+	int a[3000];
+	char cs[3000];
+	memset(a, 0, sizeof(a));
+	
+	//将 - 提取出来；
+	bool f1=fs(x1),f2=fs(x2);
+	if (f1 == 1)x1.erase(0, 1);
+	if (f2 == 1)x2.erase(0, 1);
+	x1 = nx(x1);
+	x2 = nx(x2);
+
+	for (int i = 0; i < x1.length(); i++)
+	{
+		for (int j = 0; j < x2.length(); j++)
+		{
+			a[i + j] += (x1[i] - '0') * (x2[j] - '0');
+		}
+	}
+
+	 //该数字的大概长度
+
+	int jw;
+
+	for (int i = 0; i <= x1.length()+x2.length(); i++)
+	{
+		if (i != 0)
+		{
+			a[i] += a[i - 1] / 10;
+			a[i - 1] %= 10;
+			
+		}
+	
+	}
+
+	int cd1 = x1.length() + x2.length();
+	while (a[cd1] == 0 && cd1 >0)  //找该数字的长度
+	{
+		cd1--;
+	}
+
+	for (int i = cd1; i >= 0; i--)
+	{
+		cs[cd1 - i] = a[i] + '0';
+		
+	}
+	cs[cd1 + 1] = '\0';
+	string  cs1=cs;
+	if (f1 == 1 || f2 == 1)
+	{
+		cs1 = "-" + cs1;
+	}
+
+	return cs1;
+}
+
+
+
+
+int main()
+{
+
+	string x1, x2;
+	cin >> x1>>x2;
+	
+	
+
+	cout<<x(x1, x2);
+
+	return 0;
+
+
+}
+
+
+
+        </textarea>
+
+			</div>
+            
+        </div>
+
+        <div name="wei" class="weidiv">
+			<div>
+				<div>xxxxxx xxxxxxx xxxxxxx xxxxxx xxx</div>
+				<div>xxxxxx xxxx xxxxxx xxx</div>
+			</div>
+	
+           
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>
